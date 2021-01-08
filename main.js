@@ -24,7 +24,7 @@ const renderWithIcons = mdi => function render(v2h, v2ctx) {
     ...attrs
   }
   const svgAttrs = {
-    fill: 'currentColor',
+    fill: props.color || 'currentColor',
     width: props.width || props.size,
     height: props.height || props.size,
     viewBox: props.viewBox,
@@ -69,6 +69,7 @@ export default {
       ...versionDependentOpts,
       props: {
         title: [String],
+        color: [String],
         spin: [Boolean],
         width: [Number, String],
         height: [Number, String],
