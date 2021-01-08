@@ -16,7 +16,7 @@ const renderWithIcons = mdi => function render(v2h, v2ctx) {
   const props = isV2 ? v2ctx.props : this
   const attrs = isV2 ? v2ctx.attrs : this.$attrs
   const h = isV2 ? v2h : v3h
-  const iconPath = mdi[`mdi${ucFirst(props.name)}`] || mdiAlert
+  const iconPath = mdi[`mdi${ucFirst(props.name.replace('mdi',''))}`] || mdiAlert
 
   const spanAttrs = {
     role: props.role,
